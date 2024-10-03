@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         //PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, new Intent(Intent.ACTION_BATTERY_CHANGED), 0);
+
         registerReceiver(batteryReceiver, filter);
         Log.i("BatteryMonitor", "BroadcastReceiver registrado");
     }
